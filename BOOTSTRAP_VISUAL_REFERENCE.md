@@ -1,6 +1,6 @@
 # BOOTSTRAP USAGE - VISUAL REFERENCE
 
-## 📱 RESPONSIVE GRID SYSTEM
+##  RESPONSIVE GRID SYSTEM
 
 ### Dashboard (index.php) - 4 Columns
 - **Desktop (LG)**: 4 kolom (col-lg-3)
@@ -13,7 +13,7 @@
 
 ---
 
-## 🃏 COMPONENT STRUCTURE
+##  COMPONENT STRUCTURE
 
 ### CARD COMPONENT
 ```
@@ -86,7 +86,7 @@
 
 ---
 
-## 🎨 COLOR & BADGE SYSTEM
+##  COLOR & BADGE SYSTEM
 
 ### BUTTON VARIANTS
 ```
@@ -107,13 +107,13 @@
 │ ✓ Active     ← bg-success          │
 │ ✗ Inactive   ← bg-danger           │
 │ ℹ Info       ← bg-info             │
-│ ⚡ Primary   ← bg-primary          │
+│ Primary   ← bg-primary             │
 └────────────────────────────────────┘
 ```
 
 ---
 
-## 📊 FILE USING BOOTSTRAP
+## FILE USING BOOTSTRAP
 
 ### DASHBOARD & LIST FILES
 ```
@@ -166,7 +166,7 @@ lembur-detail.php ✓
 
 ---
 
-## 🔗 BOOTSTRAP CLASSES QUICK REFERENCE
+##  BOOTSTRAP CLASSES QUICK REFERENCE
 
 ### LAYOUT
 ```
@@ -234,7 +234,7 @@ form-control            → Form input/select
 
 ---
 
-## 🚀 IMPLEMENTATION SUMMARY
+## IMPLEMENTATION SUMMARY
 
 ### TOTAL BOOTSTRAP USAGE
 ```
@@ -253,10 +253,10 @@ BOOTSTRAP COVERAGE: 100% ✓
 
 ### BREAKPOINT IMPLEMENTATION
 ```
-📱 Mobile < 576px       : Full width, stacked layout
-📱 Small ≥ 576px        : Some adjustments
-📱 Tablet ≥ 768px      : col-md-6 (2 column), table visible
-💻 Desktop ≥ 992px     : col-lg-3, col-lg-8 (multi-column)
+ Mobile < 576px       : Full width, stacked layout
+ Small ≥ 576px        : Some adjustments
+ Tablet ≥ 768px      : col-md-6 (2 column), table visible
+ Desktop ≥ 992px     : col-lg-3, col-lg-8 (multi-column)
 ```
 
 ### NEXT STEPS (OPTIONAL)
@@ -271,7 +271,7 @@ BOOTSTRAP COVERAGE: 100% ✓
 
 ---
 
-## 📚 RESOURCES
+##  RESOURCES
 
 ### CDN Links Used
 ```
@@ -295,6 +295,3 @@ Font Awesome: https://fontawesome.com/docs
 
 ---
 
-**STATUS: ✅ BOOTSTRAP FULLY INTEGRATED & DOCUMENTED**
-
-Semua 18 file sudah menggunakan Bootstrap 5.3.0 dengan optimal dan konsisten!
