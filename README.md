@@ -2,19 +2,19 @@
 
 Aplikasi web berbasis PHP untuk mengelola data karyawan, gaji, jabatan, rating, dan tarif lembur.
 
-## 🎯 Fitur Utama
+## Fitur Utama
 
-✅ **Dashboard** - Welcome carousel dan daftar karyawan terbaru dengan slideshow
-✅ **Manajemen Karyawan** - CRUD lengkap (Tambah, Lihat, Edit, Hapus, Detail)
-✅ **Manajemen Jabatan** - Kelola posisi kerja dengan gaji pokok dan tunjangan
-✅ **Manajemen Rating** - Kelola skala penilaian kinerja karyawan
-✅ **Tarif Lembur** - Pengaturan tarif lembur per jam
-✅ **Perhitungan Gaji** - Hitung gaji otomatis berdasarkan data karyawan
-✅ **Database MySQL** - Data tersimpan aman di database
-✅ **Responsive Design** - Tampilan optimal di desktop, tablet, dan mobile
-✅ **UI/UX Modern** - Interface yang menarik dengan Bootstrap 5
+ **Dashboard** - Welcome carousel dan daftar karyawan terbaru dengan slideshow
+ **Manajemen Karyawan** - CRUD lengkap (Tambah, Lihat, Edit, Hapus, Detail)
+ **Manajemen Jabatan** - Kelola posisi kerja dengan gaji pokok dan tunjangan
+ **Manajemen Rating** - Kelola skala penilaian kinerja karyawan
+ **Tarif Lembur** - Pengaturan tarif lembur per jam
+ **Perhitungan Gaji** - Hitung gaji otomatis berdasarkan data karyawan
+ **Database MySQL** - Data tersimpan aman di database
+ **Responsive Design** - Tampilan optimal di desktop, tablet, dan mobile
+ **UI/UX Modern** - Interface yang menarik dengan Bootstrap 5
 
-### 🎨 Bootstrap Components (24 Fitur Lengkap)
+###  Bootstrap Components 
 
 **Layout & Grid**
 - Responsive grid system (col-md, col-lg)
@@ -50,21 +50,13 @@ Aplikasi web berbasis PHP untuk mengelola data karyawan, gaji, jabatan, rating, 
 - Responsive hamburger menu untuk mobile
 - Sidebar collapse dengan smooth animation
 
-## 📋 Kebutuhan Sistem
+##  Kebutuhan Sistem
 
 - PHP 7.4 atau lebih tinggi
-- MySQL 5.7 atau lebih tinggi (MariaDB juga mendukung)
-- Apache/Nginx Server
-- XAMPP, WAMP, atau Laragon (untuk development)
+- MySQL 5.7 atau lebih tinggi
+- Apache Server
+- XAMPP(untuk development)
 
-## 📦 Instalasi
-
-### 1. Clone atau Download Proyecto
-
-```bash
-cd /xampp/htdocs/
-# Atau ke lokasi server Anda
-```
 
 ### 2. Buat Database
 
@@ -106,7 +98,7 @@ Buka browser dan akses:
 http://localhost/Database-PHP/
 ```
 
-## 📂 Struktur Folder
+##  Struktur Folder
 
 ```
 Database-PHP/
@@ -154,15 +146,15 @@ Database-PHP/
 └── README.md                   # Dokumentasi
 ```
 
-## 🔐 Fitur Keamanan
+## Fitur Keamanan
 
-- ✅ Input validation dan sanitasi data
-- ✅ SQL Injection prevention dengan escape string
-- ✅ Session management
-- ✅ CSRF protection ready
-- ✅ OOP Architecture untuk code quality
+-  Input validation dan sanitasi data
+-  SQL Injection prevention dengan escape string
+-  Session management
+-  CSRF protection ready
+-  OOP Architecture untuk code quality
 
-## 💾 Database Schema
+##  Database Schema
 
 ### Tabel `karyawan`
 ```sql
@@ -214,7 +206,7 @@ Database-PHP/
 - created_at
 ```
 
-## 📖 Panduan Penggunaan
+## Panduan Penggunaan
 
 ### 1. Dashboard
 - Tampilan welcome screen
@@ -238,7 +230,7 @@ Database-PHP/
   - Bonus (Gaji Pokok × Presentase Rating)
   - **Total Gaji = Gaji Pokok + Tunjangan + Lembur + Bonus**
 
-## 🎨 Customization
+##  Customization
 
 ### Mengubah Warna Tema
 Edit file `assets/css/style.css`:
@@ -259,7 +251,7 @@ Edit di `views/layout.php`:
 <small>Human Resource Management</small>
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Error: Database Connection Failed
 - Periksa konfigurasi di `config/Database.php`
@@ -275,28 +267,17 @@ Edit di `views/layout.php`:
 - Periksa path BASE_URL di setiap file
 - Jika menggunakan subdomain, sesuaikan BASE_URL
 
-## 🚀 Deployment
+## Deployment
 
 1. Upload semua file ke server hosting
 2. Update konfigurasi database di `config/Database.php`
 3. Import database di hosting
 4. Akses melalui domain Anda
 
-## 📝 Catatan
+##  Catatan
 
 - Semua foto/dokumen dapat ditambahkan dengan modifikasi database
 - Email notification dapat ditambahkan dengan library mailer
 - Export gaji ke Excel dapat diimplementasikan dengan PHPExcel
 - Authentication/Login dapat ditambahkan sesuai kebutuhan
 
-## 📞 Support & Kontribusi
-
-Jika menemukan bug atau memiliki saran, silakan buat issue atau pull request.
-
-## 📄 Lisensi
-
-MIT License - Bebas digunakan untuk keperluan komersial dan personal.
-
----
-
-**Dibuat dengan ❤️ menggunakan PHP OOP, Bootstrap 5 & MySQL**
