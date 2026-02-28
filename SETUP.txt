@@ -483,4 +483,4 @@ Jika menemukan bug atau error:
 3. Cek file error log MySQL
 4. Verifikasi konfigurasi database
 
-Semoga aplikasi ini bermanfaat! 🎉
+
