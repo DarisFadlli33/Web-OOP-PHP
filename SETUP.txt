@@ -1,0 +1,486 @@
+INSTRUKSI SETUP APLIKASI SISTEM MANAJEMEN KARYAWAN
+=================================================
+
+FITUR BARU - RESPONSIVE DESIGN
+==============================
+✓ Hamburger menu untuk mobile (layar < 768px)
+✓ Sidebar slide-in dari kiri
+✓ Overlay semi-transparent background
+✓ Auto-close sidebar saat klik menu atau di resize
+✓ Optimal untuk desktop, tablet, dan mobile
+✓ Tidak ada horizontal scroll
+✓ Semua konten terlihat sempurna di berbagai ukuran
+
+TESTING RESPONSIVE DESIGN
+=========================
+1. Buka aplikasi di browser
+2. Tekan F12 untuk buka DevTools
+3. Tekan Ctrl+Shift+M untuk toggle device toolbar
+4. Pilih berbagai ukuran device:
+   - iPhone 12/13 (390px)
+   - iPad (768px)
+   - Desktop (1920px+)
+5. Resize browser window untuk test berbagai ukuran
+6. Verifikasi:
+   - Hamburger button muncul di mobile
+   - Sidebar bisa dibuka/ditutup
+   - Tidak ada konten yang terpotong
+   - Text readable di semua ukuran
+   - Buttons mudah diklik di mobile
+
+BREAKPOINTS
+===========
+- Extra Small: 0px - 480px (smartphone kecil)
+- Small: 481px - 767px (smartphone besar)
+- Tablet: 768px - 1024px (ipad, tablet)
+- Desktop: 1025px + (desktop, laptop)
+
+LANGKAH 1: PERSIAPAN DATABASE
+------------------------------
+1. Buka phpMyAdmin (http://localhost/phpmyadmin)
+2. Klik menu "Database" atau "+ New"
+3. Buat database baru dengan nama: kantor
+4. Klik tab "Import"
+5. Pilih file kantor.sql dari folder Database-PHP
+6. Klik tombol "Go" atau "Import"
+
+ATAU gunakan command line:
+mysql -u root -p
+CREATE DATABASE kantor;
+USE kantor;
+source kantor.sql;
+
+LANGKAH 2: VERIFIKASI STRUKTUR FOLDER
+--------------------------------------
+Pastikan struktur folder sudah sesuai:
+- config/Database.php          ✓
+- classes/Model.php            ✓
+- models/Karyawan.php          ✓
+- models/Jabatan.php           ✓
+- models/Rating.php            ✓
+- models/Lembur.php            ✓
+- models/Gaji.php              ✓
+- controllers/karyawan-controller.php   ✓
+- controllers/jabatan-controller.php    ✓
+- controllers/rating-controller.php     ✓
+- controllers/lembur-controller.php     ✓
+- controllers/gaji-controller.php       ✓
+- views/layout.php             ✓
+- views/layout-footer.php      ✓
+- views/karyawan.php           ✓
+- views/jabatan.php            ✓
+- views/rating.php             ✓
+- views/lembur.php             ✓
+- views/gaji.php               ✓
+- assets/css/style.css         ✓
+- assets/js/main.js            ✓
+- index.php                    ✓
+
+LANGKAH 3: KONFIGURASI DATABASE (JIKA DIPERLUKAN)
+--------------------------------------------------
+Edit file: config/Database.php
+Sesuaikan dengan konfigurasi server Anda:
+
+$host = "localhost";    // Host MySQL
+$user = "root";         // Username MySQL
+$pass = "";             // Password MySQL (kosong jika default)
+$db = "kantor";         // Nama Database
+
+LANGKAH 4: AKSES APLIKASI
+--------------------------
+1. Buka browser
+2. Ketik URL: http://localhost/Database-PHP/
+3. Anda akan melihat Dashboard dengan sidebar menu
+
+MENU APLIKASI
+=============
+1. Dashboard
+   - Welcome message
+   - Statistik karyawan & gaji
+   - Daftar karyawan terbaru
+
+2. Daftar Karyawan
+   - List semua karyawan
+   - Tombol Tambah Karyawan
+   - Aksi: Detail, Edit, Hapus
+
+3. Daftar Jabatan
+   - List semua jabatan
+   - Tampilkan gaji pokok & tunjangan
+   - Aksi: Detail, Edit, Hapus
+
+4. Daftar Rating
+   - List penilaian kinerja (1-5)
+   - Tampilkan presentase bonus
+   - Aksi: Detail, Edit, Hapus
+
+5. Tarif Lembur
+   - Pengaturan tarif lembur per jam
+   - Contoh perhitungan lembur
+   - Aksi: Detail, Edit, Hapus
+
+6. Gaji Karyawan
+   - Hitung gaji dengan otomatis
+   - Pilih karyawan & jam lembur
+   - Lihat rincian gaji detail
+   - Aksi: Detail, Edit, Hapus
+
+FITUR UTAMA
+===========
+✓ CRUD (Create, Read, Update, Delete)
+✓ Perhitungan gaji otomatis
+✓ Responsive design (mobile-friendly) ← NEW!
+✓ Hamburger sidebar di mobile ← NEW!
+✓ Database MySQL integration
+✓ Bootstrap 5 styling
+✓ OOP Architecture
+✓ Form validation
+✓ Success/Error messages
+✓ Detail page untuk setiap data
+
+RESPONSIVE FEATURES
+===================
+✓ Desktop (1025px+)
+  - Sidebar fixed di kiri
+  - Layout normal dengan margin sidebar
+
+✓ Tablet (768px - 1024px)
+  - Sidebar tetap visible
+  - Layout dikompres sedikit
+
+✓ Mobile (max-width 768px) ← NEW!
+  - Hamburger button di topbar
+  - Sidebar slide-in dari kiri
+  - Dark overlay background
+  - Auto-close saat memilih menu
+  - Full width content
+
+✓ Extra Small (max-width 480px) ← NEW!
+  - Optimized untuk smartphone kecil
+  - Kompact buttons dan menu
+  - Efficient spacing
+
+TROUBLESHOOTING
+===============
+
+Error: "Koneksi database gagal"
+→ Pastikan MySQL running
+→ Periksa konfigurasi di config/Database.php
+→ Pastikan database 'kantor' sudah dibuat
+
+Error: "Table tidak ditemukan"
+→ Import file kantor.sql ke database
+→ Periksa nama database di config/Database.php
+
+Error: "File not found"
+→ Pastikan semua file sudah dibuat
+→ Periksa path URL di browser
+
+Sidebar tidak muncul di mobile?
+→ Tekan F12 dan toggle device toolbar
+→ Clearkan browser cache (Ctrl+Shift+Delete)
+→ Refresh halaman (Ctrl+R)
+
+Hamburger button tidak keluar?
+→ Resize browser window ke < 768px
+→ Atau gunakan device simulation di DevTools
+→ Periksa browser console untuk errors
+
+TIPS PENGGUNAAN
+===============
+1. Untuk menambah data, klik tombol "Tambah" di setiap halaman
+2. Untuk mengubah data, klik tombol "Edit" pada baris data
+3. Untuk melihat detail, klik tombol "Detail" atau nama data
+4. Untuk menghapus, klik tombol "Hapus" lalu konfirmasi
+5. Perhitungan gaji otomatis saat input jam lembur
+6. Di mobile, buka menu dengan hamburger button di topbar
+7. Klik menu item untuk navigation dan sidebar auto-close
+
+RESPONSIVE TESTING CHECKLIST
+=============================
+□ Desktop view (1920px) - Sidebar visible, normal layout
+□ Laptop view (1366px) - Sidebar visible, normal layout
+□ Tablet view (768px - 1024px) - Sidebar visible, reduced padding
+□ Mobile view (480px - 767px) - Hamburger button visible, slide-in sidebar
+□ Small mobile (320px - 479px) - Optimized layout, compact UI
+□ Landscape orientation - All content visible without scroll
+□ Portrait orientation - All content readable
+□ Touch interaction - Buttons easily clickable
+□ Menu toggle - Hamburger button works correctly
+□ Overlay click - Sidebar closes when clicking overlay
+□ Navigation - Sidebar closes after clicking menu item
+□ Window resize - Responsive changes work smoothly
+□ No horizontal scroll - Content fits within viewport
+
+RUMUS PERHITUNGAN GAJI
+======================
+Total Gaji = Gaji Pokok + Tunjangan + Total Lembur + Bonus
+
+Dimana:
+- Gaji Pokok: dari Jabatan
+- Tunjangan: dari Jabatan
+- Total Lembur: Jam Lembur × Tarif Lembur
+- Bonus: Gaji Pokok × Presentase Rating
+
+Contoh:
+- Karyawan: Budi (Manajer)
+- Gaji Pokok: 10.000.000
+- Tunjangan: 3.000.000
+- Jam Lembur: 5 jam
+- Tarif Lembur: 25.000/jam
+- Rating: 5 (20% bonus)
+
+Perhitungan:
+- Total Lembur = 5 × 25.000 = 125.000
+- Bonus = 10.000.000 × 20% = 2.000.000
+- Total Gaji = 10.000.000 + 3.000.000 + 125.000 + 2.000.000 = 15.125.000
+
+FITUR RESPONSIF
+===============
+Aplikasi sudah dioptimalkan untuk:
+✓ Desktop (1920px dan lebih)
+✓ Laptop (1366px - 1919px)
+✓ iPad/Tablet (768px - 1365px)
+✓ Smartphone (480px - 767px)
+✓ Small Phone (320px - 479px)
+
+CSS Flexbox dan Media Queries digunakan untuk layout yang fleksibel.
+JavaScript untuk hamburger menu toggle dan auto-close functionality.
+
+KEAMANAN
+========
+✓ Input validation pada form
+✓ SQL injection prevention dengan mysqli_real_escape_string
+✓ Session management
+✓ CSRF protection ready
+✓ Error handling proper
+✓ Responsive security (no layout vulnerabilities)
+
+DOKUMENTASI
+============
+- README.md - Dokumentasi lengkap aplikasi
+- RESPONSIVE_DESIGN.md - Detail responsive design implementation
+- SETUP.txt - File ini, panduan setup
+- test.php - Test page untuk verifikasi setup
+
+NEXT STEPS (OPTIONAL)
+=====================
+1. Tambahkan authentication/login
+2. Implementasi export gaji ke Excel
+3. Tambahkan foto profil karyawan
+4. Email notification untuk gaji
+5. Laporan karyawan dan gaji
+6. Filter dan search data
+7. Pagination untuk tabel besar
+8. Audit log untuk perubahan data
+9. Dark mode toggle
+10. PWA support untuk offline mode
+
+SUPPORT
+=======
+Jika menemukan bug atau error:
+1. Periksa console browser (F12)
+2. Lihat error message di screen
+3. Cek file error log MySQL
+4. Verifikasi konfigurasi database
+5. Baca file RESPONSIVE_DESIGN.md untuk responsive issues
+
+PERFORMANCE NOTES
+=================
+- Sidebar menggunakan CSS transforms (GPU accelerated)
+- No layout shift saat sidebar toggle
+- Smooth animations dengan 0.3s duration
+- Optimized image dan asset loading
+- Minimal JavaScript untuk better performance
+
+Semoga aplikasi ini bermanfaat! 🎉
+
+UPDATED: Responsive Design dengan Hamburger Menu
+Last Update: Februari 2026
+
+------------------------------
+1. Buka phpMyAdmin (http://localhost/phpmyadmin)
+2. Klik menu "Database" atau "+ New"
+3. Buat database baru dengan nama: kantor
+4. Klik tab "Import"
+5. Pilih file kantor.sql dari folder Database-PHP
+6. Klik tombol "Go" atau "Import"
+
+ATAU gunakan command line:
+mysql -u root -p
+CREATE DATABASE kantor;
+USE kantor;
+source kantor.sql;
+
+LANGKAH 2: VERIFIKASI STRUKTUR FOLDER
+--------------------------------------
+Pastikan struktur folder sudah sesuai:
+- config/Database.php          ✓
+- classes/Model.php            ✓
+- models/Karyawan.php          ✓
+- models/Jabatan.php           ✓
+- models/Rating.php            ✓
+- models/Lembur.php            ✓
+- models/Gaji.php              ✓
+- controllers/karyawan-controller.php   ✓
+- controllers/jabatan-controller.php    ✓
+- controllers/rating-controller.php     ✓
+- controllers/lembur-controller.php     ✓
+- controllers/gaji-controller.php       ✓
+- views/layout.php             ✓
+- views/layout-footer.php      ✓
+- views/karyawan.php           ✓
+- views/jabatan.php            ✓
+- views/rating.php             ✓
+- views/lembur.php             ✓
+- views/gaji.php               ✓
+- assets/css/style.css         ✓
+- assets/js/main.js            ✓
+- index.php                    ✓
+
+LANGKAH 3: KONFIGURASI DATABASE (JIKA DIPERLUKAN)
+--------------------------------------------------
+Edit file: config/Database.php
+Sesuaikan dengan konfigurasi server Anda:
+
+$host = "localhost";    // Host MySQL
+$user = "root";         // Username MySQL
+$pass = "";             // Password MySQL (kosong jika default)
+$db = "kantor";         // Nama Database
+
+LANGKAH 4: AKSES APLIKASI
+--------------------------
+1. Buka browser
+2. Ketik URL: http://localhost/Database-PHP/
+3. Anda akan melihat Dashboard dengan sidebar menu
+
+MENU APLIKASI
+=============
+1. Dashboard
+   - Welcome message
+   - Statistik karyawan & gaji
+   - Daftar karyawan terbaru
+
+2. Daftar Karyawan
+   - List semua karyawan
+   - Tombol Tambah Karyawan
+   - Aksi: Detail, Edit, Hapus
+
+3. Daftar Jabatan
+   - List semua jabatan
+   - Tampilkan gaji pokok & tunjangan
+   - Aksi: Detail, Edit, Hapus
+
+4. Daftar Rating
+   - List penilaian kinerja (1-5)
+   - Tampilkan presentase bonus
+   - Aksi: Detail, Edit, Hapus
+
+5. Tarif Lembur
+   - Pengaturan tarif lembur per jam
+   - Contoh perhitungan lembur
+   - Aksi: Detail, Edit, Hapus
+
+6. Gaji Karyawan
+   - Hitung gaji dengan otomatis
+   - Pilih karyawan & jam lembur
+   - Lihat rincian gaji detail
+   - Aksi: Detail, Edit, Hapus
+
+FITUR UTAMA
+===========
+✓ CRUD (Create, Read, Update, Delete)
+✓ Perhitungan gaji otomatis
+✓ Responsive design (mobile-friendly)
+✓ Database MySQL integration
+✓ Bootstrap 5 styling
+✓ OOP Architecture
+✓ Form validation
+✓ Success/Error messages
+✓ Detail page untuk setiap data
+
+TROUBLESHOOTING
+===============
+
+Error: "Koneksi database gagal"
+→ Pastikan MySQL running
+→ Periksa konfigurasi di config/Database.php
+→ Pastikan database 'kantor' sudah dibuat
+
+Error: "Table tidak ditemukan"
+→ Import file kantor.sql ke database
+→ Periksa nama database di config/Database.php
+
+Error: "File not found"
+→ Pastikan semua file sudah dibuat
+→ Periksa path URL di browser
+
+TIPS PENGGUNAAN
+===============
+1. Untuk menambah data, klik tombol "Tambah" di setiap halaman
+2. Untuk mengubah data, klik tombol "Edit" pada baris data
+3. Untuk melihat detail, klik tombol "Detail" atau nama data
+4. Untuk menghapus, klik tombol "Hapus" lalu konfirmasi
+5. Perhitungan gaji otomatis saat input jam lembur
+
+RUMUS PERHITUNGAN GAJI
+======================
+Total Gaji = Gaji Pokok + Tunjangan + Total Lembur + Bonus
+
+Dimana:
+- Gaji Pokok: dari Jabatan
+- Tunjangan: dari Jabatan
+- Total Lembur: Jam Lembur × Tarif Lembur
+- Bonus: Gaji Pokok × Presentase Rating
+
+Contoh:
+- Karyawan: Budi (Manajer)
+- Gaji Pokok: 10.000.000
+- Tunjangan: 3.000.000
+- Jam Lembur: 5 jam
+- Tarif Lembur: 25.000/jam
+- Rating: 5 (20% bonus)
+
+Perhitungan:
+- Total Lembur = 5 × 25.000 = 125.000
+- Bonus = 10.000.000 × 20% = 2.000.000
+- Total Gaji = 10.000.000 + 3.000.000 + 125.000 + 2.000.000 = 15.125.000
+
+FITUR RESPONSIF
+===============
+Aplikasi sudah dioptimalkan untuk:
+✓ Desktop (1920px dan lebih)
+✓ Laptop (1024px - 1919px)
+✓ Tablet (768px - 1023px)
+✓ Mobile (320px - 767px)
+
+CSS Grid dan Flexbox digunakan untuk layout yang fleksibel.
+
+KEAMANAN
+========
+✓ Input validation pada form
+✓ SQL injection prevention dengan mysqli_real_escape_string
+✓ Session management
+✓ CSRF protection ready
+✓ Error handling proper
+
+NEXT STEPS (OPTIONAL)
+=====================
+1. Tambahkan authentication/login
+2. Implementasi export gaji ke Excel
+3. Tambahkan foto profil karyawan
+4. Email notification untuk gaji
+5. Laporan karyawan dan gaji
+6. Filter dan search data
+7. Pagination untuk tabel besar
+8. Audit log untuk perubahan data
+
+SUPPORT
+=======
+Jika menemukan bug atau error:
+1. Periksa console browser (F12)
+2. Lihat error message di screen
+3. Cek file error log MySQL
+4. Verifikasi konfigurasi database
+
+Semoga aplikasi ini bermanfaat! 🎉
