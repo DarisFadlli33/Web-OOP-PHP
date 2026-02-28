@@ -274,10 +274,5 @@ Edit di `views/layout.php`:
 3. Import database di hosting
 4. Akses melalui domain Anda
 
-##  Catatan
 
-- Semua foto/dokumen dapat ditambahkan dengan modifikasi database
-- Email notification dapat ditambahkan dengan library mailer
-- Export gaji ke Excel dapat diimplementasikan dengan PHPExcel
-- Authentication/Login dapat ditambahkan sesuai kebutuhan
 
